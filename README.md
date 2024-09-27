@@ -16,14 +16,16 @@ A generic Streamlit UI for testing generative AI agents built using Agents for A
    ```
 
 2. Set the following environment variables:
-   - `BEDROCK_AGENT_ID` - The ID of the agent
-   - `BEDROCK_AGENT_ALIAS_ID` - The ID of the agent alias. The default `TSTALIASID` will be used if it is not set.
+   - Create a file env_vars.sh
+   - `BEDROCK_AGENT_ID`= - The ID of the agent
+   - `BEDROCK_AGENT_ALIAS_ID`= - The ID of the agent alias. The default `TSTALIASID` will be used if it is not set.
    - The [AWS environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) that provides the credentials to your account. The principal must have the necessary permissions to invoke the Bedrock agent.
 3. (Optional) Set the folliowing environment variables to customize the UI:
-   - `BEDROCK_AGENT_TEST_UI_TITLE` - The page title. The default `Agents for Amazon Bedrock Test UI` will used if it is not set.
-   - `BEDROCK_AGENT_TEST_UI_ICON` - The favicon, such as `:bar_chart:`. The default Streamlit icon will be used if it is not set.
+   - `BEDROCK_AGENT_TEST_UI_TITLE`= - The page title. The default `Agents for Amazon Bedrock Test UI` will used if it is not set.
+   - `BEDROCK_AGENT_TEST_UI_ICON`= - The favicon, such as `:bar_chart:`. The default Streamlit icon will be used if it is not set.
 4. Run the following command to start the Streamlit app:
 
    ```
+   source env_vars.sh
    streamlit run app.py --server.port=8080 --server.address=localhost
    ```
